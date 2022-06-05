@@ -1,5 +1,6 @@
+// O(n)
+// Use a hashmap to check if corresponding counterpart is present
 import java.util.HashMap;
-
 class Solution {
     public int[] twoSum(int[] nums, int target) {
        int[] ans = new int[2];

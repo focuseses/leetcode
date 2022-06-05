@@ -1,0 +1,41 @@
+Common Techniques :)
+1. Two Pointer 
+- Array has to be sorted
+- Once the array is sorted the two pointers can be taken which mark the beginning and end of the array respectively
+- If the sum is greater than the sum of those two elements, shift the right pointer to decrease the value of the required sum 
+- If the sum is lesser than the required value, shift the left pointer to increase the value of the required sum 
+
+2. Prefix sum
+- Additional array to collect the sum of the elements till its position 
+
+3. Hashmap vs hashset
+Hashmap: duplicates values are allowed but no duplicate key is allowed 
+- Hashmap (key = number, value = target - number) to check if the pairs are present
+For python:
+dict1 = dict(X=1, Y=2, Z=3)
+or {'X': 1, 'Y': 2, 'Z': 3}
+
+4. Interval tree
+Supports 
+- Add an interval 
+- Remove an interval 
+- Given an interval x, find if x overlaps with any of the existing intervals.
+Search:
+1) If x overlaps with root's interval, return the root's interval.
+2) If left child of root is not empty and the max in left child 
+is greater than x's low value, recur for left child
+3) Else recur for right child.
+
+5. Sort first!
+Makes life easier for interval, duplicate questions
+
+6. Useful python functions
+lst = ["a", "b", "c"] 
+"".join(lst) gives "abc"
+
+txt = "hello lol"
+txt.split(["hello", "lol"])
+
+print a dic into a list
+print(dic[elem] for elem in dic)
+
