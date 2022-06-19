@@ -14,6 +14,9 @@ Hashmap: duplicates values are allowed but no duplicate key is allowed
 For python:
 dict1 = dict(X=1, Y=2, Z=3)
 or {'X': 1, 'Y': 2, 'Z': 3}
+or 
+dict = {} 
+dict[X] = 1
 
 4. Interval tree
 Supports 
@@ -39,3 +42,24 @@ txt.split(["hello", "lol"])
 print a dic into a list
 print(dic[elem] for elem in dic)
 
+7. Detecting cycles 
+A. Hashing approach 
+- Hash each node address
+- Traverse through the list while checking if it is in the hash table.
+O(n) since n x O(1) checks
+Space" O(n)
+
+B.  
+
+8. Sliding Window 
+(The condition to use the sliding window technique is that the problem 
+asks to find the maximum (or minimum) value for a 
+function that calculates the answer repeatedly for a 
+set of ranges from the array.)
+Have two pointers
+If it is valid, move right pointer to right. 
+If not valid, move left pointer to right. 
+- Finding maximum sum of k consecutive elements in an array 
+- Finding subarray of size k with given sum 
+- Finding all anagrams in a string 
+- Minimum Window Substring
