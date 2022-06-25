@@ -63,3 +63,15 @@ If not valid, move left pointer to right.
 - Finding subarray of size k with given sum 
 - Finding all anagrams in a string 
 - Minimum Window Substring
+
+9. LinkedList
+Let head be the entire linked list. 
+To get the head value, head.val
+Get tail value, head.next
+
+10. Dynamic Programming Steps
+State: dp(i, j) = maximum sum of happiness on day i if i do activity j on that day
+State space: i=1..N and j={A=0, B=1, C=2 }
+Transition: dp(i, j) = max(dp(i-1, (j - 1)%3) + cost(i, j), dp(i-1, (j + 1)%3) + cost(i, j))
+Base Case: dp(1, 0) = a_i, dp(1, 1) = b_i, dp(1, 2) = c_i
+Time complexity: O(state space) * O(transition) = O(n) * O(1) = O(n)
