@@ -1,4 +1,5 @@
 # O(n^2)
+# sort then compare start 
 class Solution:
     def merge(self, intervals):
         ranges = []

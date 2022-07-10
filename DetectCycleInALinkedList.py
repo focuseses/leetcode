@@ -7,6 +7,7 @@
 # create a hashtable, hash the node addresses then traverse and check if present before
 # O(n)
 # space: O(n)
+# for O(1) space, use 2 pointers, one move faster
 class Solution:
     def hasCycle(self, head):
         if head is None or head.next is None:

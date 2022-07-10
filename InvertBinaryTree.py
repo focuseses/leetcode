@@ -1,0 +1,18 @@
+# recursion 
+# O(n)
+from typing import Optional
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return 
+        root2 = TreeNode(root.val, None, None)
+        root2.left = self.invertTree(root.right)
+        root2.right = self.invertTree(root.left)
+        return root2
+
