@@ -1,3 +1,8 @@
+# sliding window
+# if it fulfils, move the right pointer to right
+# if it does not fulfil, move the left pointer to right
+# O(n)
+
 class Solution:
     def characterReplacement(self, s, k):
         hashtable = {}
@@ -9,7 +14,8 @@ class Solution:
             if (len(hashtable) == 0) :
                 greatest = 0
             else : 
-                greatest = max(hashtable, key=hashtable.get)
+                # greatest is the number of characters that's repeating in that window
+                greatest = hashtable[max(hashtable, key=hashtable.get)]
             condition = window <= greatest + k
             if not condition:
                 if hashtable[s[left]].get == 1:
@@ -25,6 +31,7 @@ class Solution:
                     hashtable[s[right]] = 1
                 else:
                     hashtable[s[right]] = hashtable.get(s[right]) + 1
+                right += 1
         return maximum 
 
 

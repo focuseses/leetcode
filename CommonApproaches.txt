@@ -29,10 +29,9 @@ Search:
 is greater than x's low value, recur for left child
 3) Else recur for right child.
 
-5. Sort first!
-Makes life easier for interval, duplicate questions
+(Intervals//Duplicates questions) Sort first!
 
-6. Useful python functions
+5. Useful python functions
 lst = ["a", "b", "c"] 
 "".join(lst) gives "abc"
 
@@ -42,16 +41,16 @@ txt.split(["hello", "lol"])
 print a dic into a list
 print(dic[elem] for elem in dic)
 
-7. Detecting cycles 
+6. Detecting cycles 
 A. Hashing approach 
 - Hash each node address
 - Traverse through the list while checking if it is in the hash table.
 O(n) since n x O(1) checks
-Space" O(n)
+Space: O(n)
 
-B.  
+B.  Space: O(1) -> using 2 pointers which travel different speed.
 
-8. Sliding Window 
+7. Sliding Window 
 (The condition to use the sliding window technique is that the problem 
 asks to find the maximum (or minimum) value for a 
 function that calculates the answer repeatedly for a 
@@ -64,12 +63,12 @@ If not valid, move left pointer to right.
 - Finding all anagrams in a string 
 - Minimum Window Substring
 
-9. LinkedList
+8. LinkedList
 Let head be the entire linked list. 
 To get the head value, head.val
 Get tail value, head.next
 
-10. Dynamic Programming Steps
+9. Dynamic Programming Steps
 State: dp(i, j) = maximum sum of happiness on day i if i do activity j on that day
 State space: i=1..N and j={A=0, B=1, C=2 }
 Transition: dp(i, j) = max(dp(i-1, (j - 1)%3) + cost(i, j), dp(i-1, (j + 1)%3) + cost(i, j))
